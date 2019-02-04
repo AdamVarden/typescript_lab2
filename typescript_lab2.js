@@ -23,3 +23,23 @@ function listAllTasks() {
     console.log("END: Items on list");
     console.log("");
 }
+// D. Create a function to delete a task, you must find the task inside
+// the array and delete it.
+function deleteTask(x) {
+    var key = x;
+    var index = tasks.indexOf(key, 0);
+    //https://www.tutorialspoint.com/typescript/typescript_array_indexof.html
+    if (index > -1) { // if >-1 this implies a match was found.
+        tasks.splice(index, 1);
+        //https://www.tutorialspoint.com/typescript/typescript_array_splice.htm
+    }
+    console.log("=========== TASK REMOVED ===========");
+    console.log('Task "' + x + '" removed from the list');
+    return tasks.length;
+}
+// Execution
+console.log("Number of items:", addTask('This is our first task'));
+console.log("Number of items:", addTask('This is our second task!!!'));
+listAllTasks();
+console.log("Number of items:", deleteTask('This is our second task!!!'));
+listAllTasks();
