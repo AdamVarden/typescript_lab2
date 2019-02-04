@@ -11,3 +11,15 @@ function addTask(task) {
     y = tasks.length;
     return y;
 }
+// C. Create a function to list all tasks, it must show in the console the task.
+function listAllTasks() {
+    console.log("");
+    console.log("START: Items on list");
+    console.log("");
+    tasks.forEach(function (task) {
+        console.log(task);
+    });
+    console.log("");
+    console.log("END: Items on list");
+    console.log("");
+}
